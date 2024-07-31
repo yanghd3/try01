@@ -110,7 +110,6 @@ V = V0; % 当前时刻速度
 H = H0;
 [K,f] = fmincon(@(K) fun_Object(K,t0,s0,HV0f,c,V,H),K0,A,b,Aeq,beq,lb,ub,nonlcon,options);
 
-%% 基于高度系数的控制点设计
 % 控制点速度
 V1 = Vf + 1*(V0 - Vf)/4;
 V2 = Vf + 2*(V0 - Vf)/4;
